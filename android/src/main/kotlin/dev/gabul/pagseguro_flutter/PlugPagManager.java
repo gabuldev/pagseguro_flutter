@@ -1,8 +1,7 @@
 package dev.gabul.pagseguro_flutter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import br.com.uol.pagseguro.plugpag.PlugPag;
 import br.com.uol.pagseguro.plugpag.PlugPagAppIdentification;
 

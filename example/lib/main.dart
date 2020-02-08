@@ -29,7 +29,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
-
   final String title;
 
   @override
@@ -37,7 +36,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   var pag;
 
   @override
@@ -49,14 +47,14 @@ class _MyHomePageState extends State<MyHomePage> {
       showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            content: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                if (state.type == Type.loading) CircularProgressIndicator(),
-                Text(state.message)
-              ],
-            ),
-          ));
+                content: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    if (state.type == Type.loading) CircularProgressIndicator(),
+                    Text(state.message)
+                  ],
+                ),
+              ));
     });
     super.initState();
   }
@@ -73,47 +71,51 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("Antes de tudo, faça o pareamento da sua máquina de cartão!",
+              Text(
+                "Antes de tudo, faça o pareamento da sua máquina de cartão!",
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.red,fontSize: 20),
+                style: TextStyle(color: Colors.red, fontSize: 20),
               ),
-
-              Text("Se nao fizer isso o aplicativo vai fechar, estou resolvendo isso...",
+              Text(
+                "Se nao fizer isso o aplicativo vai fechar, estou resolvendo isso...",
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.red,fontSize: 20),
+                style: TextStyle(color: Colors.red, fontSize: 20),
               ),
-              SizedBox(height: 30,),
+              SizedBox(
+                height: 30,
+              ),
               Text("Execute os botões na ordem"),
               FlatButton(
                 child: Text("Pedir permissões"),
-                onPressed: (){
+                onPressed: () {
                   pag.requestPermissions();
                 },
               ),
               FlatButton(
                 child: Text("Autenticar no PagSeguro"),
-                onPressed: (){
+                onPressed: () {
                   pag.requestAuthentication();
                 },
               ),
               FlatButton(
                 child: Text("Verificar o status da autenticacao"),
-                onPressed: (){
+                onPressed: () {
                   pag.checkAuthentication();
                 },
               ),
               Text("Se for uma minizinha ou similares"),
               FlatButton(
-                child: Text("Realizar uma trasacao de debito no valor de R\$: 2,00"),
-                onPressed: (){
+                child: Text(
+                    "Realizar uma trasacao de debito no valor de R\$: 2,00"),
+                onPressed: () {
                   pag.startPinpadDebitPayment(2.00);
                 },
               ),
-
               Text("Se for uma a pro use esse"),
               FlatButton(
-                child: Text("Realizar uma trasacao de debito no valor de R\$: 2,00"),
-                onPressed: (){
+                child: Text(
+                    "Realizar uma trasacao de debito no valor de R\$: 2,00"),
+                onPressed: () {
                   pag.startTerminalDebitPayment(2.00);
                 },
               )

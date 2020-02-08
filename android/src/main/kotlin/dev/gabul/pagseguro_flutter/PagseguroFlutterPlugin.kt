@@ -15,9 +15,9 @@ import dev.gabul.pagseguro_flutter.task.TerminalQueryTransactionTask
 import dev.gabul.pagseguro_flutter.task.TerminalVoidPaymentTask
 import dev.gabul.pagseguro_flutter.task.TerminalPaymentTask
 import android.content.pm.PackageManager
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 import android.content.pm.PackageInfo
-import android.support.v4.app.ActivityCompat
+import androidx.core.app.ActivityCompat
 import io.flutter.app.FlutterActivity
 import io.flutter.plugin.common.MethodChannel
 import android.app.Activity

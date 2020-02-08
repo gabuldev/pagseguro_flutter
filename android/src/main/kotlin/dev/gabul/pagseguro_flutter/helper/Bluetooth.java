@@ -3,7 +3,7 @@ package dev.gabul.pagseguro_flutter.helper;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.util.Set;
 
