@@ -1,7 +1,6 @@
 name: pagseguro_flutter
 description: Facilitando os métodos de pagamento com o PagSeguro, implemetamos o PlugPag, agora Flutter e as maquininhas ficam perfeitas.
 version: 0.0.5
-author: Gabriel Sávio - Flutterando <contato@gabul.dev>
 homepage: https://gabul.dev
 repository: https://github.com/gabuldev/pagseguro_flutter
 
