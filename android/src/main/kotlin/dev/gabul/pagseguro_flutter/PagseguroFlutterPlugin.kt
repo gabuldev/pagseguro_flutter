@@ -71,6 +71,9 @@ class PagseguroFlutterPlugin():  FlutterActivity(), MethodCallHandler, TaskHandl
       "startPinpadVoucherPayment" -> this.startPinpadVoucherPayment(call.arguments as Int)
       "startPinpadVoidPayment" -> this.startPinpadVoidPayment()
 
+      //Transation
+      "cancelCurrentTransation" -> this.cancelCurrentTransation()
+
       else -> result.notImplemented()
     }
   }
@@ -171,6 +174,14 @@ class PagseguroFlutterPlugin():  FlutterActivity(), MethodCallHandler, TaskHandl
    */
   private fun invalidateAuthentication() {
     PlugPagManager.getInstance().plugPag.invalidateAuthentication()
+  }
+  
+  
+  /**
+   * Invalidates current authentication.
+   */
+  private fun cancelCurrentTransation() {
+    PlugPagManager.getInstance().plugPag.abort();
   }
 
   // -----------------------------------------------------------------------------------------------------------------

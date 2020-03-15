@@ -119,4 +119,9 @@ class PlugPag {
   void startPinpadVoidPayment() async {
     await platform.invokeMethod('startPinpadVoidPayment');
   }
+
+  //! Transation
+  Future<void> cancelCurrentTransation() {
+    return platform.invokeMethod("cancelCurrentTransation");
+  }
 }
